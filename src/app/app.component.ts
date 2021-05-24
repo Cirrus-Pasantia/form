@@ -12,6 +12,7 @@ export class AppComponent {
 
   sendName(name) {
     console.log('sended name', name);
+    window.localStorage.setItem('name', name);
     console.log(dispatcher);
     dispatcher.dispatch({
       type: 'SEND_NAME',
